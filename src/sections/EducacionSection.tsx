@@ -2,16 +2,33 @@ import EducationCard from "../components/EducacionCard";
 
 const educacion = [
   {
-    institution: "Universidad Nacional de Colombia",
-    period: "2020 - Actualidad",
+    institution: "Universidad de Antioquia",
+    period: "2019 - Actualidad",
     title: "Ingeniería de Sistemas",
-    description: "Enfoque en desarrollo de software, estructuras de datos, bases de datos y sistemas distribuidos.",
+    description:
+      "Formación integral en desarrollo de software, estructuras de datos, bases de datos, sistemas operativos, redes y sistemas distribuidos.",
   },
   {
-    institution: "Platzi",
-    period: "2022 - 2023",
-    title: "Carrera de Frontend Developer",
-    description: "Cursos prácticos de HTML, CSS, JavaScript, React, NextJS, y herramientas modernas del frontend.",
+    institution: "OpenBootcamp",
+    period: "2022 - 2024",
+    title: "Certificaciones",
+    description:
+      "Formación práctica en fundamentos de programación, desarrollo web (HTML, CSS, JavaScript), lenguajes de programación como Python y Java, y control de versiones con Git.",
+  },
+  {
+    institution: "Cisco Networking Academy",
+    period: "2023 - 2024",
+    title: "Redes y CyberOps",
+    description:
+      "Capacitación en redes de computadoras, fundamentos de ciberseguridad, operaciones de seguridad (CyberOps), protocolos, enrutamiento y defensa ante amenazas cibernéticas.",
+  },
+  {
+    institution:
+      "IN2LAB research group | Facultad de Ingeniería, Universidad de Antioquia",
+    period: "2023 - 2024",
+    title: "Certificaciones",
+    description:
+      "Cursos especializados en Inteligencia Artificial aplicada a la ingeniería y ciencias, así como algoritmos para el análisis y procesamiento de Big Data.",
   },
 ];
 

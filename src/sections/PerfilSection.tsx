@@ -19,9 +19,22 @@ export default function PerfilSection() {
 
         {/* Nombre y descripción */}
         <div>
-          <h2 className="text-2xl font-bold text-gray-800">Tu Nombre</h2>
+          <h2 className="text-2xl font-bold text-gray-800">
+            Jonathan David Fernandez Vargas
+          </h2>
           <p className="text-gray-600 mt-2">
-            Soy estudiante de Ingeniería con interés en el desarrollo web frontend y experiencia en React, NextJS y Tailwind.
+            Soy una persona apasionada por el aprendizaje continuo y la
+            resolución creativa de problemas. Mi experiencia abarca diversos
+            campos, desde la programación y la investigación hasta la atención
+            al cliente y la consultoría. Me destaco por mi habilidad para
+            comunicarme de manera clara y efectiva, así como por mi capacidad
+            para adaptarme rápidamente a nuevos entornos y desafíos. Disfruto
+            trabajando en equipo, colaborando para alcanzar objetivos comunes y
+            aportando ideas innovadoras. Mi enfoque proactivo y mi dedicación me
+            han permitido desarrollar habilidades sólidas en múltiples áreas,
+            como lo son el desarrollo web y desarrollo de software, siempre
+            buscando superar expectativas y generar un impacto positivo en
+            cualquier proyecto en el que participe.
           </p>
 
           {/* Botón que muestra el modal */}
@@ -46,7 +59,10 @@ export default function PerfilSection() {
             </button>
             <h3 className="text-xl font-semibold mb-4 text-gray-800">¡Hola!</h3>
             <p className="text-gray-600">
-              Soy un apasionado por la tecnología y el desarrollo de interfaces interactivas. Me encanta trabajar en equipo y siempre estoy en busca de aprender nuevas herramientas para mejorar mis habilidades.
+              Soy un apasionado por la tecnología y el desarrollo de interfaces
+              interactivas. Me encanta trabajar en equipo y siempre estoy en
+              busca de aprender nuevas herramientas para mejorar mis
+              habilidades.
             </p>
           </div>
         </div>
