@@ -54,12 +54,15 @@ const conocimientos = [
 export default function ConocimientosSection() {
   return (
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Conocimientos</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {conocimientos.map((item, idx) => (
-          <KnowledgeCard key={idx} {...item} />
-        ))}
+      <div className="max-w-5xl mx-auto px-4">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">Conocimientos</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {conocimientos.map((item, idx) => (
+            <KnowledgeCard key={idx} {...item} />
+          ))}
+        </div>
       </div>
     </section>
   );
 }
+

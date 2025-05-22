@@ -46,7 +46,7 @@ export default function PortfolioCard({
                 rel="noopener noreferrer"
                 className="block mt-4 text-indigo-600 hover:underline"
               >
-                Ver en GitHub
+                Ver en Web
               </a>
             )}
           </div>

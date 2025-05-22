@@ -35,11 +35,13 @@ const educacion = [
 export default function EducacionSection() {
   return (
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Educación</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {educacion.map((item, idx) => (
-          <EducationCard key={idx} {...item} />
-        ))}
+      <div className="max-w-[calc(100vw-64px)]">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">Educación</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
+          {educacion.map((item, idx) => (
+            <EducationCard key={idx} {...item} />
+          ))}
+        </div>
       </div>
     </section>
   );

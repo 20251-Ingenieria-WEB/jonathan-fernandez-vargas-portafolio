@@ -1,28 +1,45 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function PerfilSection() {
   const [showModal, setShowModal] = useState(false);
+  const fullName = "Jonathan David Fernandez Vargas";
+  const [typedName, setTypedName] = useState("");
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      setTypedName(fullName.slice(0, index));
+      index++;
+      if (index > fullName.length) clearInterval(timer);
+    }, 100);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section className="bg-white rounded-xl p-6 shadow-md mb-8">
-      <div className="flex flex-col md:flex-row items-center gap-6">
-        {/* Foto de perfil */}
-        <Image
-          src="/img/Perfil.jpeg"
-          alt="Foto de perfil"
-          width={120}
-          height={120}
-          className="rounded-full border-4 border-gray-300"
-        />
+    <section className="bg-white rounded-xl p-6 shadow-xl mb-8 animate-fade-in transition-all duration-700 max-w-5xl mx-auto">
+      <div className="flex flex-col md:flex-row items-center gap-8">
+        {/* Foto de perfil grande y animada */}
+        <div className="relative group transform hover:scale-105 transition-transform duration-500 ease-in-out">
+          <Image
+            src="/img/Perfil.jpeg"
+            alt="Foto de perfil"
+            width={220}
+            height={220}
+            className="rounded-full border-4 border-indigo-300 shadow-2xl"
+          />
+          <div className="absolute bottom-2 right-2 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full shadow-md animate-bounce">
+            ¡Hola!
+          </div>
+        </div>
 
         {/* Nombre y descripción */}
-        <div>
-          <h2 className="text-2xl font-bold text-gray-800">
-            Jonathan David Fernandez Vargas
+        <div className="flex-1">
+          <h2 className="text-4xl font-mono font-bold text-indigo-600 whitespace-nowrap overflow-hidden border-r-2 border-indigo-600 pr-1 animate-typing">
+            {typedName}
           </h2>
-          <p className="text-gray-600 mt-2">
+          <p className="text-gray-700 mt-4 text-justify leading-relaxed">
             Soy una persona apasionada por el aprendizaje continuo y la
             resolución creativa de problemas. Mi experiencia abarca diversos
             campos, desde la programación y la investigación hasta la atención
@@ -37,10 +54,10 @@ export default function PerfilSection() {
             cualquier proyecto en el que participe.
           </p>
 
-          {/* Botón que muestra el modal */}
+          {/* Botón mejorado */}
           <button
             onClick={() => setShowModal(true)}
-            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+            className="mt-6 px-5 py-2 border-2 border-indigo-600 text-indigo-600 font-semibold rounded-full hover:bg-indigo-600 hover:text-white transition-all duration-300 shadow-sm"
           >
             Más sobre mí
           </button>
@@ -50,7 +67,7 @@ export default function PerfilSection() {
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
-          <div className="bg-white rounded-xl p-6 w-[90%] max-w-md shadow-lg relative">
+          <div className="bg-white rounded-xl p-6 w-[90%] max-w-md shadow-lg relative animate-fade-in">
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-xl"

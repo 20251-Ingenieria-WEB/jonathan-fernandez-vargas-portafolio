@@ -2,31 +2,59 @@ import PortfolioCard from "../components/PortafolioCard";
 
 const proyectos = [
   {
-    image: "/img/proyecto1.jpg",
-    title: "Gestor de Tareas",
-    shortDescription: "App para gestionar tareas con React y Firebase.",
+    image: "/img/LogoJonathan.png",
+    title: "Portafolio",
+    shortDescription: "Mi portafolio personal",
     longDescription:
-      "Este proyecto permite registrar tareas, marcarlas como completadas y almacenarlas en Firebase. Incluye autenticación con Google.",
-    link: "https://github.com/usuario/todo-app",
+      "This is my space on GitHub Pages where I share my projects, research, and contributions to the open source world.",
+    link: "https://jonathand77.github.io/mi-portafolio/",
   },
   {
-    image: "/img/proyecto2.jpg",
-    title: "Sistema de Cotizaciones",
-    shortDescription: "Simulador de cotizaciones de transporte especial.",
+    image: "/img/MovieTime.png",
+    title: "Movie Time",
+    shortDescription: "Sistema con las peliculas actuales del momento",
     longDescription:
-      "Calcula tarifas con base en tipo de vehículo, pasajeros y lugares de origen y destino. Implementado con Node.js y React.",
-    link: "https://github.com/usuario/cotizador-transporte",
+      "This project consisted of creating this movie page as a web development practice project, where advanced HTML, CSS, JavaScript, and React techniques are applied with Bootstrap to create a functional and visually stunning platform.",
+    link: "https://cotizador-servicios-transporte-cootraespeciales.vercel.app/",
   },
-  // Agrega más proyectos si deseas
+  {
+    image: "/img/logo-cootraespeciales.svg",
+    title: "Cootraespeciales | Cotizador de Viajes",
+    shortDescription: "Sistema de cotizador de viajes",
+    longDescription:
+      "Web-based transportation quoting system in collaboration with the Colombian bus company COOTRAESPECIALES. Designed to simplify and automate transport cost estimation.",
+    link: "https://cotizador-servicios-transporte-cootraespeciales.vercel.app/",
+  },
+  {
+    image: "/img/LogoWWE-Database.png",
+    title: "WWE Database",
+    shortDescription: "Estado actual de la empresa WWE",
+    longDescription:
+      "Página informativa sobre WWE creada como práctica de desarrollo web con React y Bootstrap.",
+    link: "https://jonathand77.github.io/mi-portafolio/",
+  },
+  {
+    image: "/img/LogoTorneoFC.png",
+    title: "Torneo FC",
+    shortDescription: "Sistema de creación de torneos para fútbol.",
+    longDescription:
+      "Plataforma para generar torneos de fútbol, desarrollada con React, HTML, CSS y JavaScript.",
+    link: "https://cotizador-servicios-transporte-cootraespeciales.vercel.app/",
+  },
 ];
 
 export default function PortfolioSection() {
   return (
-    <section className="mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">Portafolio</h2>
-      <div className="flex overflow-x-auto gap-4 pb-4">
+    <section className="mb-10 max-w-[calc(100%-300px)] mx-auto px-4">
+      <h2 className="text-2xl font-bold text-gray-800 mb-6">Portafolio</h2>
+      <div
+        className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
         {proyectos.map((p, idx) => (
-          <PortfolioCard key={idx} {...p} />
+          <div key={idx} className="snap-start shrink-0 w-80">
+            <PortfolioCard {...p} />
+          </div>
         ))}
       </div>
     </section>
